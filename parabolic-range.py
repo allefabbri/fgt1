@@ -22,7 +22,8 @@ v0 = 5
 h = 1
 u = 1/np.sqrt(1+2*g*h/v0**2) # u = tg theta
 xmax = v0**2/g/u
-us = np.asarray([ np.tan(-np.pi/2/9), np.tan(np.pi/3), u, np.tan(np.pi/2 * 7/8), np.tan(np.pi/2*95/100) ])
+us = np.asarray([ np.tan(-np.pi/2/9), np.tan(np.pi/3), u, np.tan(np.pi/2 * 7/8), np.tan(np.pi/2/6) ])
+us.sort()
 ts = np.arctan(us) * 180 / np.pi
 ylab = [ 'θ = ' + '%.1f'%t + '°' for t in ts]
 ymax = v0**2/g*np.sin(np.max(ts)*np.pi/180)
